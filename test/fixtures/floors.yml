@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  floor_number: 1
+  slab_thickness: 1
+  ceiling_height: 1
+  project_id: 1
+
+two:
+  floor_number: 1
+  slab_thickness: 1
+  ceiling_height: 1
+  project_id: 1

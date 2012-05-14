@@ -1,0 +1,29 @@
+<h1>Listing floors</h1>
+
+<table>
+  <tr>
+    <th>Floor number</th>
+    <th>Slab thickness</th>
+    <th>Ceiling height</th>
+    <th>Project</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @floors.each do |floor| %>
+  <tr>
+    <td><%= floor.floor_number %></td>
+    <td><%= floor.slab_thickness %></td>
+    <td><%= floor.ceiling_height %></td>
+    <td><%= floor.project_id %></td>
+    <td><%= link_to 'Show', floor %></td>
+    <td><%= link_to 'Edit', edit_floor_path(floor) %></td>
+    <td><%= link_to 'Destroy', floor, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Floor', new_floor_path %>

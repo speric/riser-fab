@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Floor number:</b>
+  <%= @floor.floor_number %>
+</p>
+
+<p>
+  <b>Slab thickness:</b>
+  <%= @floor.slab_thickness %>
+</p>
+
+<p>
+  <b>Ceiling height:</b>
+  <%= @floor.ceiling_height %>
+</p>
+
+<p>
+  <b>Project:</b>
+  <%= @floor.project_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_floor_path(@floor) %> |
+<%= link_to 'Back', floors_path %>

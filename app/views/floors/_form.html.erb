@@ -1,0 +1,33 @@
+<%= form_for(@floor, :url => project_floors_path(params[:project_id])) do |f| %>
+  <% if @floor.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@floor.errors.count, "error") %> prohibited this floor from being saved:</h2>
+
+      <ul>
+      <% @floor.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :floor_number %><br />
+    <%= f.number_field :floor_number %>
+  </div>
+  <div class="field">
+    <%= f.label :slab_thickness %><br />
+    <%= f.number_field :slab_thickness %>
+  </div>
+  <div class="field">
+    <%= f.label :ceiling_height %><br />
+    <%= f.number_field :ceiling_height %>
+  </div>
+  <div class="field">
+    <%= f.label :project_id %><br />
+    <%= f.number_field :project_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,25 @@
+<h1><%= @project.name %></h1>
+
+<h2>Floors (<%= @project.floors.size %>)</h2>
+<%= link_to "Add Floor", new_project_floor_path(@project), :class => "btn" %>
+
+<p>
+<table class="table table-condensed">
+  <tr>
+    <th>Floor</th>
+    <th>Slab Thickness</th>
+    <th>Ceiling Height</th>
+    <th>Risers</th>
+  </tr>
+<% @project.floors.each do |floor| %>
+  <tr>
+  	<td><%= link_to floor.floor_number.ordinalize, project_floor_path(@project, floor) %></td>
+  	<td><%= to_feet_and_inches(floor.slab_thickness) %></td>
+  	<td><%= to_feet_and_inches(floor.ceiling_height) %></td>
+  	<td>0</td>
+  </tr>
+<% end %>
+</table>
+</p>
+
+<p><%= link_to 'Edit', edit_project_path(@project), :class => "btn btn-primary" %>&nbsp;<%= link_to 'Back', projects_path, :class => "btn btn-inverse" %></p>
