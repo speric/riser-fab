@@ -2,7 +2,7 @@ source 'http://rubygems.org'
 
 gem 'rails', '3.2.3'
 gem 'mysql', '2.8.1'
-gem 'twitter-bootstrap-rails'
+#gem 'twitter-bootstrap-rails'
 
 #gem 'mysql2'
 
@@ -18,7 +18,7 @@ group :assets do
   gem 'uglifier', '>= 1.0.3'
 end
 
-gem 'jquery-rails'
+#gem 'jquery-rails'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
