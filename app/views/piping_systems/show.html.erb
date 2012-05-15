@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @piping_system.name %>
+</p>
+
+<p>
+  <b>Pipe schedule:</b>
+  <%= @piping_system.pipe_schedule %>
+</p>
+
+<p>
+  <b>Fitting:</b>
+  <%= @piping_system.fitting %>
+</p>
+
+<p>
+  <b>Typical tee height:</b>
+  <%= @piping_system.typical_tee_height %>
+</p>
+
+<p>
+  <b>Unit connection size:</b>
+  <%= @piping_system.unit_connection_size %>
+</p>
+
+<p>
+  <b>Project:</b>
+  <%= @piping_system.project_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_piping_system_path(@piping_system) %> |
+<%= link_to 'Back', piping_systems_path %>

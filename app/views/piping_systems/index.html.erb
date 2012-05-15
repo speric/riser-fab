@@ -1,0 +1,33 @@
+<h1>Listing piping_systems</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Pipe schedule</th>
+    <th>Fitting</th>
+    <th>Typical tee height</th>
+    <th>Unit connection size</th>
+    <th>Project</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @piping_systems.each do |piping_system| %>
+  <tr>
+    <td><%= piping_system.name %></td>
+    <td><%= piping_system.pipe_schedule %></td>
+    <td><%= piping_system.fitting %></td>
+    <td><%= piping_system.typical_tee_height %></td>
+    <td><%= piping_system.unit_connection_size %></td>
+    <td><%= piping_system.project_id %></td>
+    <td><%= link_to 'Show', piping_system %></td>
+    <td><%= link_to 'Edit', edit_piping_system_path(piping_system) %></td>
+    <td><%= link_to 'Destroy', piping_system, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Piping system', new_piping_system_path %>

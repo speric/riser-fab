@@ -1,0 +1,46 @@
+<p>
+  <%= form_for(@piping_system, :url => project_piping_systems_path(params[:project_id]), :html => {:class => "form-horizontal"}) do |f| %>
+    <fieldset>
+      <% if @piping_system.errors.any? %>
+        <div id="error_explanation">
+          <h2><%= pluralize(@piping_system.errors.count, "error") %> prohibited this piping_system from being saved:</h2>
+
+          <ul>
+          <% @piping_system.errors.full_messages.each do |msg| %>
+            <li><%= msg %></li>
+          <% end %>
+          </ul>
+        </div>
+      <% end %>
+
+      <div class="control-group">
+        <%= f.label :name, :class => "control-label" %>
+        <div class="controls"><%= f.text_field :name, :class => 'text_field' %></div>
+      </div>
+       <div class="control-group">
+        <%= f.label :system_tag, :class => "control-label" %>
+        <div class="controls"><%= f.text_field :system_tag, :class => 'text_field' %></div>
+      </div>
+      <div class="control-group">
+        <%= f.label :pipe_schedule, :class => "control-label" %>
+        <div class="controls"><%= f.text_field :pipe_schedule, :class => 'text_field' %></div>
+      </div>
+      <div class="control-group">
+        <%= f.label :fitting_schedule, :class => "control-label" %>
+        <div class="controls"><%= f.text_field :fitting_schedule, :class => 'text_field' %></div>
+      </div>
+      <div class="control-group">
+        <%= f.label :typical_tee_height, :class => "control-label" %>
+        <div class="controls"><%= f.number_field :typical_tee_height, :class => 'text_field' %></div>
+      </div>
+      <div class="control-group">
+        <%= f.label :unit_connection_size, :class => "control-label" %>
+        <div class="controls"><%= f.number_field :unit_connection_size, :class => 'text_field' %></div>
+      </div>
+      <%= f.hidden_field :project_id, :value => @project.id %>
+      <div class="form-actions">
+        <%= f.submit 'Create System', :class => 'btn btn-primary' %>
+      </div>
+    </fieldset>
+  <% end %>
+</p>

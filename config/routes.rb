@@ -1,5 +1,6 @@
 RiserFab::Application.routes.draw do
   resources :projects do
+    resources :piping_systems
     resources :floors
   end
 

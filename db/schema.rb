@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120514194058) do
+ActiveRecord::Schema.define(:version => 20120515112919) do
 
   create_table "floors", :force => true do |t|
     t.integer  "floor_number"
@@ -20,6 +20,18 @@ ActiveRecord::Schema.define(:version => 20120514194058) do
     t.integer  "project_id"
     t.datetime "created_at",     :null => false
     t.datetime "updated_at",     :null => false
+  end
+
+  create_table "piping_systems", :force => true do |t|
+    t.string   "name"
+    t.string   "pipe_schedule"
+    t.string   "fitting_schedule"
+    t.integer  "typical_tee_height"
+    t.integer  "unit_connection_size"
+    t.integer  "project_id"
+    t.datetime "created_at",           :null => false
+    t.datetime "updated_at",           :null => false
+    t.string   "system_tag"
   end
 
   create_table "projects", :force => true do |t|
